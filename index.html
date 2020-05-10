@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Animate Text</title>
+<style>
+body{
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size:16px;
+}
+
+.titles{
+  position:relative;
+  width:100px;
+  height:100px;
+	
+}
+.title{
+  display:inline-block;
+  position:relative;
+  width:100px;
+  text-align:center;
+  top:0;
+}
+.title:not(:first-child){
+  opacity:0;
+ margin-left:-100px;
+}
+
+.title1 {
+     animation-name: anim1;
+     animation-duration: 5s;
+     animation-delay: 5s;
+     animation-iteration-count: infinite;
+}
+
+.title2 {
+     animation-name: anim2;
+     animation-duration: 5s;
+     animation-delay: 5s;
+     animation-iteration-count:infinite;
+}
+
+.title3 {
+     animation-name: anim3;
+     animation-duration: 5s;
+     animation-delay: 5s;
+     animation-iteration-count: infinite;
+}
+
+/* The animation code */
+@keyframes anim1 {
+  0%, 100%{
+    opacity: 1;
+    top:0px;
+  }
+  33.33%{
+    opacity: 0;
+    top:-15px;
+  }
+  66.66%{
+    opacity: 0;
+    top:15px;
+  }
+}
+@keyframes anim2 {
+  0%{
+    opacity: 0;
+    top:15px;
+  }
+  33.33%{
+    opacity: 1;
+    top:0px;
+  }
+  66.66%, 100%{
+    opacity: 0;
+    top:-15px;
+  }
+  
+}
+@keyframes anim3 {
+  0%, 33.33%{
+    opacity: 0;
+    top:15px;
+  }
+
+   
+  66.66%{
+    opacity: 1;
+    top:0px;
+  }
+  100%{
+    opacity: 0;
+    top:-15px;
+  }
+}
+	</style>
+</head>
+
+<body>
+<span class="intro">A<span class="titles"><span class="title title1">Front-end</span><span class="title title2">Back-end</span><span class="title title3">Full-stack</span></span>developer.</span>
+
+</body>
+</html>
